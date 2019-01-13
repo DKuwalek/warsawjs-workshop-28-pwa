@@ -417,6 +417,7 @@
           "sizes": "16x16"
         }
       ],
-    "display":"standalone"
+    "display":"standalone",
+    "start_url": "/"
       
 }
