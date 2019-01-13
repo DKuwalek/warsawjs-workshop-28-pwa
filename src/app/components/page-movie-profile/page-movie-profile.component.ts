@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/interfaces/movie';
+import { ActivatedRoute } from '@angular/router';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-page-movie-profile',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageMovieProfileComponent implements OnInit {
 
-  constructor() { }
+  movie: Movie = null;
+
+  constructor(
+    private route: ActivatedRoute,
+    private movies: MoviesService
+  ) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.params.id;
+    console.log({id});
+    this.movie = this.movies.getMoviesById(id);
   }
 
 }

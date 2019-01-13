@@ -1,4 +1,5 @@
 export interface Movie {
+    id: String;
     title: String;
     desrciption: String;
     imageUrl: String;

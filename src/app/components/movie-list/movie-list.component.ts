@@ -9,6 +9,7 @@ import { Movies } from 'src/app/interfaces/movie';
 export class MovieListComponent implements OnInit {
 
   @Input() movies: Movies = null;
+  
   constructor() { }
 
   ngOnInit() {
